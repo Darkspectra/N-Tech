@@ -1,7 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import logo from '../assets/logo.png';
-// import { AuthContext } from "../../Provider/AuthProvider";
+import { AuthContext } from "../Provider/AuthProvider";
+import userDefault from "../assets/user.jpg";
+
 // import Discount from "./Discount";
 
 
@@ -13,12 +15,12 @@ const NavBar = () => {
         <li className="font-bold text-3xl mr-6"><NavLink to="/mycart">My Cart</NavLink></li>
     </>
 
-    // const { user, logOut } = useContext(AuthContext);
-    // const handleSignOut = () => {
-    //     logOut()
-    //         .then()
-    //         .catch()
-    // }
+    const { user, logOut } = useContext(AuthContext);
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
     return (
         <div>
             <div className="flex mx-auto items-center justify-between">
@@ -40,7 +42,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <div>
-                    {/* {
+                    {
                         user ?
                             <div>
                                 <button onClick={handleSignOut} className="btn text-3xl font-bold">Sign Out</button>
@@ -55,7 +57,7 @@ const NavBar = () => {
                             <Link to="/login">
                                 <button className="btn text-3xl font-bold">Login</button>
                             </Link>
-                    } */}
+                    }
                 </div>
             </div>
             {/* <Discount></Discount> */}
