@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import AddProduct from './Components/AddProduct.jsx'
 import Home from './Components/Home.jsx'
+import CardOverview from './Components/CardOverview.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: "/addproduct",
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: "/products/:name",
+        element: <CardOverview></CardOverview>,
+        loader: ()=> fetch("http://localhost:5000/product")
       }
     ]
   },

@@ -1,32 +1,32 @@
 [
     {
         "id": "1",
-        "name": "Apple",
+        "name": "apple",
         "image": "https://i.ibb.co/C8NSD6V/apple-store6683.jpg"
     },
     {
         "id": "2",
-        "name": "Intel",
+        "name": "intel",
         "image": "https://i.ibb.co/6mdmRXR/Intel-logo-2006-2020.jpg"
     },
     {
         "id": "3",
-        "name": "Nvidia",
+        "name": "nvidia",
         "image": "https://i.ibb.co/JRDbNKH/nvidia.jpg"
     },
     {
         "id": "4",
-        "name": "Console",
+        "name": "console",
         "image": "https://i.ibb.co/YfvzBdK/console.jpg"
     },
     {
         "id": "5",
-        "name": "Sony",
+        "name": "sony",
         "image": "https://i.ibb.co/YhsjVWh/sony.jpg"
     },
     {
         "id": "6",
-        "name": "Google",
+        "name": "google",
         "image": "https://i.ibb.co/g3cSTZr/google.jpg"
     }
 ]

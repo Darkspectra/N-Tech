@@ -25,7 +25,7 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.insertedID) {
+                if (data.acknowledged) {
                     Swal.fire({
                         title: 'Success!',
                         text: 'Product Added Successfully',
