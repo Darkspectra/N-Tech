@@ -4,8 +4,6 @@ import logo from '../assets/logo.png';
 import { AuthContext } from "../Provider/AuthProvider";
 import userDefault from "../assets/user.jpg";
 
-// import Discount from "./Discount";
-
 
 const NavBar = () => {
     const links = <>
@@ -60,7 +58,6 @@ const NavBar = () => {
                     }
                 </div>
             </div>
-            {/* <Discount></Discount> */}
         </div>
     );
 };
