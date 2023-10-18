@@ -37,22 +37,22 @@ const router = createBrowserRouter([
       {
         path: "/products/:name",
         element: <CardOverview></CardOverview>,
-        loader: () => fetch("http://localhost:5000/product")
+        loader: () => fetch("https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/product")
       },
       {
         path: "/products/:name/details/:id",
         element: <DetailsProducts></DetailsProducts>,
-        loader: () => fetch("http://localhost:5000/product")
+        loader: () => fetch("https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/product")
       },
       {
         path: "/mycart",
         element: <PrivateRoutes><Cart></Cart></PrivateRoutes>,
-        loader: () => fetch("http://localhost:5000/cart")
+        loader: () => fetch("https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/cart")
       },
       {
         path: "/products/:name/updateProduct/:id",
         element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/product/${params.id}`)
       },
       {
         path: '/login',

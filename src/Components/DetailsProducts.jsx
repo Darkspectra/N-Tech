@@ -7,7 +7,7 @@ const DetailsProducts = () => {
     const card = items.find(card => card._id == id)
 
     const handleAddCart = () => {
-        fetch("http://localhost:5000/cart", {
+        fetch("https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/cart", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

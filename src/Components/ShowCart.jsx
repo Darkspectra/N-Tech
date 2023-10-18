@@ -18,7 +18,7 @@ const ShowCart = ({ cart, items, setItems }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/cart/${_Id}`, {
+                fetch(`https://tech-store-server-42x7j8qao-farhan-novos-projects.vercel.app/cart/${_Id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
