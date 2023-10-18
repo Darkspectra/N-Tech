@@ -10,6 +10,7 @@ import {
 import AddProduct from './Components/AddProduct.jsx'
 import Home from './Components/Home.jsx'
 import CardOverview from './Components/CardOverview.jsx'
+import DetailsProducts from './Components/DetailsProducts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "/products/:name",
         element: <CardOverview></CardOverview>,
+        loader: ()=> fetch("http://localhost:5000/product")
+      },
+      {
+        path: "/products/:name/details/:id",
+        element: <DetailsProducts></DetailsProducts>,
         loader: ()=> fetch("http://localhost:5000/product")
       }
     ]

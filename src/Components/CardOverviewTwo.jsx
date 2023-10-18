@@ -52,7 +52,9 @@ const CardOverviewTwo = ({ products }) => {
                             <h2>{price}</h2>
                             <h2>{rating}</h2>
                         </div>
-                        <button className="btn join-item">Details</button>
+                        <Link to={`details/${_id}`}>
+                            <button className="btn join-item">Details</button>
+                        </Link>
                         <Link to={`updateProduct/${_id}`}>
                             <button className="btn join-item">Update</button>
                         </Link>
