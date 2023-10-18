@@ -1,8 +1,9 @@
-# React + Vite
+## Key Features for website
+## Website name: [N-Tech]()
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. User can add product into cart
+2. User can update product
+3. User Can Delete Product
+4. Login and Registration system initialized
+5. Secondary Login system (Google) initialized
