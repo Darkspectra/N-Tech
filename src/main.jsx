@@ -13,11 +13,13 @@ import CardOverview from './Components/CardOverview.jsx'
 import DetailsProducts from './Components/DetailsProducts.jsx'
 import Cart from './Components/Cart.jsx'
 import UpdateProduct from './Components/UpdateProduct.jsx'
+import ErrorPage from './Components/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
