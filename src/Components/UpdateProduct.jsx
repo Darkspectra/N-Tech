@@ -44,7 +44,7 @@ const UpdateProduct = () => {
     }
     return (
         <div className="bg-[#F4F3F0] p-24">
-            <h2 className="text-3xl font-extrabold">Add Products</h2>
+            <h2 className="text-3xl font-extrabold">Update Products</h2>
             <form onSubmit={handleUpdateProduct}>
                 <div className="">
                     <div className="md:w-full">

@@ -44,7 +44,7 @@ const DetailsProducts = () => {
                             <h2>{card.price}</h2>
                             <h2>{card.rating}</h2>
                         </div>
-                        <button onClick={handleAddCart} className="btn join-item">Add to Cart</button>
+                        <button onClick={handleAddCart} className="btn  font-bold bg-green-300">Add to Cart</button>
                     </div>
                 </div>
             </div>
