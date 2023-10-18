@@ -3,42 +3,6 @@ import { Link } from "react-router-dom";
 const CardOverviewTwo = ({ products }) => {
     const { name, brand, type, price, description, rating, photo, _id } = products;
 
-    // const handleDelete = _Id => {
-    //     console.log(_Id);
-    //     Swal.fire({
-    //         title: 'Are you sure?',
-    //         text: "You won't be able to revert this!",
-    //         icon: 'warning',
-    //         showCancelButton: true,
-    //         confirmButtonColor: '#3085d6',
-    //         cancelButtonColor: '#d33',
-    //         confirmButtonText: 'Yes, delete it!'
-    //     }).then((result) => {
-    //         if (result.isConfirmed) {
-
-
-    //             fetch(`http://localhost:5000/coffee/${_Id}`, {
-    //                 method: "DELETE"
-    //             })
-    //                 .then(res => res.json())
-    //                 .then(data => {
-    //                     console.log(data);
-    //                     if (data.deletedCount > 0) {
-    //                         Swal.fire(
-    //                             'Deleted!',
-    //                             'Your Coffee has been deleted.',
-    //                             'success'
-    //                         )
-    //                         const remaining = coffees.filter(cof=> cof._id != _Id);
-    //                         setCoffees(remaining);
-    //                     }
-    //                 })
-
-    //             console.log("delete confirmed")
-    //         }
-    //     })
-
-    // }
     return (
         <div className="card card-side bg-base-100 shadow-xl">
             <figure><img src={photo} alt="Movie" /></figure>

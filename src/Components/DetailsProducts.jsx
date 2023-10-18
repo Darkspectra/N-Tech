@@ -1,9 +1,34 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const DetailsProducts = () => {
     const items = useLoaderData();
     const { id } = useParams();
     const card = items.find(card => card._id == id)
+
+    const handleAddCart = () => {
+        fetch("http://localhost:5000/cart", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(card)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+    }
+
+    console.log(card);
 
     return (
         <div className="card card-side bg-base-100 shadow-xl">
@@ -19,9 +44,7 @@ const DetailsProducts = () => {
                             <h2>{card.price}</h2>
                             <h2>{card.rating}</h2>
                         </div>
-                        <Link to={`cart/${card._id}`}>
-                            <button className="btn join-item">Add to Cart</button>
-                        </Link>
+                        <button onClick={handleAddCart} className="btn join-item">Add to Cart</button>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
+import logo from '../assets/logo.png';
 // import { AuthContext } from "../../Provider/AuthProvider";
 // import Discount from "./Discount";
 
 
 const NavBar = () => {
     const links = <>
-        <li className="font-bold text-3xl"><NavLink to="/">Home</NavLink></li>
+        <NavLink to="/"><img className="w-16 rounded-full mx-auto" src={logo} alt="" /></NavLink>
+        <li className="font-bold text-3xl ml-10"><NavLink to="/">Home</NavLink></li>
         <li className="font-bold text-3xl mx-6"><NavLink to="/addproduct">Add Product</NavLink></li>
         <li className="font-bold text-3xl mr-6"><NavLink to="/mycart">My Cart</NavLink></li>
     </>

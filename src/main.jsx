@@ -11,6 +11,8 @@ import AddProduct from './Components/AddProduct.jsx'
 import Home from './Components/Home.jsx'
 import CardOverview from './Components/CardOverview.jsx'
 import DetailsProducts from './Components/DetailsProducts.jsx'
+import Cart from './Components/Cart.jsx'
+import UpdateProduct from './Components/UpdateProduct.jsx'
 
 const router = createBrowserRouter([
   {
@@ -35,7 +37,17 @@ const router = createBrowserRouter([
         path: "/products/:name/details/:id",
         element: <DetailsProducts></DetailsProducts>,
         loader: ()=> fetch("http://localhost:5000/product")
-      }
+      },
+      {
+        path: "/mycart",
+        element: <Cart></Cart>,
+        loader: ()=> fetch("http://localhost:5000/cart")
+      },
+      {
+        path: "/products/:name/updateProduct/:id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+      },
     ]
   },
 
